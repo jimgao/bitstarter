@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
   fs.readSync(fr, buffer, 0, 128);
   console.log(buffer.toString('utf-8'));
   fs.close(fr);
-  response.send(buffer.toString('utg-8'));
+  response.send(buffer.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
