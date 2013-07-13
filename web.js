@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
   
   var buffer = new Buffer(128);
   fr = fs.openSync('index.html', 'r');
-  fs = readSync(fr, buffer, 0, 128);
+  fs.readSync(fr, buffer, 0, 128);
   console.log(buffer.toString('utf-8'));
   fs.close(fr);
   response.send(buffer.toString('utg-8'));
